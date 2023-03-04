@@ -12,7 +12,7 @@ public class Category {
       // the username and password to connect
       String user = "SA";
       String password = "";
-
+      String cat; // the category to check 
       JFrame frame = new JFrame();
       
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -22,7 +22,7 @@ public class Category {
       try {
          Connection conn = DriverManager.getConnection(url, user, password);
          Statement stmt = conn.createStatement();
-         String sql = "SELECT sum(amount) as expense FROM expenses group by category ";
+         String sql = "SELECT sum(amount) as expense FROM expenses group by category where category=categ ";
          ResultSet rs = stmt.executeQuery(sql);
 
          while(rs.next()) {
