@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "ExpenseTracker/lib/hsqldb-2.7.1.jar"
+    ]
+}
