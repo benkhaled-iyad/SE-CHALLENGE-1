@@ -29,10 +29,7 @@ public class CreateTable {
                     category VARCHAR(50)
                 )
         """);
-
-        while (result.next()) {
-            System.out.println(result.getString("description"));
-        }
+        
         conn.close();
     }
 }
